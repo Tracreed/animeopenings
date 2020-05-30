@@ -128,7 +128,7 @@ function playlistAdd() {
 
 function playlistRemove() {
 	for (let i = 0; i < playlist.length; ++i) {
-		if (playlist[i].file == this.source.nextElementSibling.href.substring(this.source.nextElementSibling.href.indexOf("=")+1)) {
+		if (playlist[i].file === this.source.dataset.file) {
 			playlist.splice(i,1);
 			break;
 		}
